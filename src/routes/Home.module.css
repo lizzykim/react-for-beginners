@@ -1,0 +1,34 @@
+.container {
+  height: 100%; /**/
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*flex-box 기준 Main Axis(열) 에서 중간*/
+  align-items: center; /*flex-box 기준 Cross Axis 에서 중간*/
+  font-weight: 300; /*폰트 굵기*/
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(400px, 1fr)
+  ); /*세로 선(영화) 가 두개 잖아*/
+  grid-gap: 100px; /*row,column 사이에 빈 공간*/
+  padding: 50px; /*movie들을 밖에 padding*/
+  width: 80%;
+  padding-top: 70px; /*padding을 이미 설정해줬지만 padding-top도 따로 설정해줄수 있다*/
+}
+
+@media screen and (max-width: 1090px) {
+  /*600px wide or less*/
+  .movies {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,53 @@
+.movie {
+  background-color: white;
+  margin-bottom: 70px;
+  font-weight: 300;
+  padding: 20px;
+  color: #555558; /*글자 색*/
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.movie__img {
+  position: relative; /*부모 컴포넌트 보다 상대적으로 위에 -50px 위에 있음*/
+  top: -50px;
+  max-width: 200px; /*화면 넓이 최대로 했을 때 200px ,줄이면 더 줄어듬*/
+  width: 100%; /*이거 주석처리하면 text가 사진으로 넘어옴 (why???)*/
+  margin-right: 30px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie__title,
+.movie__year {
+  margin: 0;
+  font-weight: 300;
+  text-decoration: none; /*글자에 밑줄,중간 밑줄 등*/
+}
+
+.movie__title a {
+  margin-bottom: 5px;
+  font-size: 30px; /*폰트 사이즈*/
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.movie__genres {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0px;
+}
+
+.movie__genres li,
+.movie__year {
+  margin-right: 10px;
+  font-size: 14px;
+}
